@@ -71,16 +71,16 @@ select distinct product_line from sales;
 -- Electronic accessories
 -- Food and beverages
 
-select gender, 
-sum(case when product_line = "Health and beauty" then 1 else 0 end) as "Health and beauty",
-sum(case when product_line = "Sports and travel" then 1 else 0 end) as "Sports and travel",
-sum(case when product_line = "Fashion accessories" then 1 else 0 end) as "Fashion accessories",
-sum(case when product_line = "Home and lifestyle" then 1 else 0 end) as "Home and lifestyle",
-sum(case when product_line = "Electronic accessories" then 1 else 0 end) as "Electronic accessories",
-sum(case when product_line = "Food and beverages" then 1 else 0 end) as "Food and beverages"
-from sales
-group by gender;
+SELECT gender, 
+SUM(CASE WHEN product_line = "Health and beauty" THEN 1 ELSE 0 END) AS "Health and beauty",
+SUM(CASE WHEN product_line = "Sports and travel" THEN 1 ELSE 0 END) AS "Sports and travel",
+SUM(CASE WHEN product_line = "Fashion accessories" THEN 1 ELSE 0 END) AS "Fashion accessories",
+SUM(CASE WHEN product_line = "Home and lifestyle" THEN 1 ELSE 0 END) AS "Home and lifestyle",
+SUM(CASE WHEN product_line = "Electronic accessories" THEN 1 ELSE 0 END) AS "Electronic accessories",
+SUM(CASE WHEN product_line = "Food and beverages" THEN 1 ELSE 0 END) AS "Food and beverages"
+FROM sales
+GROUP BY gender;
 
 -- Product line by rating:
-select product_line, avg(rating) avg_rating from sales group by product_line
-order by avg_rating desc;
+SELECT product_line, AVG(rating) avg_rating FROM sales GROUP BY product_line
+ORDER BY avg_rating DESC;

@@ -1,3 +1,5 @@
+select * from sales;
+
 -- No.of cities Walmart operates:
 SELECT DISTINCT city FROM sales;
 SELECT COUNT(DISTINCT city) city_count FROM sales; 
