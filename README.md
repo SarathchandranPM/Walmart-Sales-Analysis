@@ -1,5 +1,4 @@
 ## Project Summary: Walmart Sales Analysis
-Analysis of Walmart Myanmar's Q1 2019 sales data covering customer behavior, product performance, general operations, and sales patterns.
 
 ### File Analysis
 
